@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Любимой</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6e9;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            text-align: center;
+            color: #ff3b6f;
+            overflow: hidden;
+        }
+        .container {
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+            animation: glow 2s infinite alternate;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ff3b6f;
+            animation: textGlow 2s infinite;
+        }
+        p {
+            font-size: 1.2em;
+            color: #ff6f8a;
+            margin: 15px 0;
+            animation: fadeIn 2s forwards;
+        }
+        .hearts {
+            font-size: 2.5em;
+            color: #ff3b6f;
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ff3b6f;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 2px solid #ff3b6f;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background-color: #ff3b6f;
+            color: #fff;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 15px #ffabc0; }
+            100% { box-shadow: 0 0 30px #ff3b6f; }
+        }
+        @keyframes textGlow {
+            0%, 100% { color: #ff3b6f; }
+            50% { color: #ff1a53; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        /* Дополнительные сердечки */
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .floating-hearts div {
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #ff3b6f;
+            opacity: 0.7;
+            transform: translateX(-50%);
+            animation: float 6s infinite;
+        }
+        /* Анимация полета сердечек */
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(-50%) scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(calc(-50% + 20px)) scale(0.5);
+                opacity: 0;
+            }
+        }
+        /* Создание разных сердечек */
+        .floating-hearts div:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .floating-hearts div:nth-child(3) { left: 40%; animation-delay: 2s; }
+        .floating-hearts div:nth-child(4) { left: 60%; animation-delay: 3s; }
+        .floating-hearts div:nth-child(5) { left: 80%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div>❤️</div>
+        <div>❤️</div>
+        <div>❤️</div>
+        <div>❤️</div>
+        <div>❤️</div>
+    </div>
+
+    <div class="container">
+        <div class="hearts">❤️❤️❤️</div>
+        <h1>Я тебя очень сильно люблю</h1>
+        <p>Ты – самое дорогое, что у меня есть!</p>
+        <!-- Замените URL-адрес ниже на нужный сайт -->
+        <a href="https://yourdomain.com/love.html" target="_blank">Перейти по ссылке</a>
+    </div>
+</body>
+</html>
